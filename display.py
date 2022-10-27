@@ -1,17 +1,22 @@
 import lcddriver
 import time
-display=lcddriver.lcd()
+import tecladop as Tl
 
-try:
-  while True:
-    print("toy funcionando")
-    display.lcd_display_string("linea uno",1)
-    display.lcd_dislpay_string("linea dos",2)
-    time.sleep(2)
-    display.lcd_display_string("prueba de inciio al teclado")
-    time.sleep(2)
-    display.lcd_clear()
-    time.sleep(2)
-except KeyboardInterrupt:
-  print("limpiando uwu")
-  display.lcd.clear()
+dis= lcddriver.lcd()
+
+def display(Tl):
+  if Tl.lectura=="1":
+    dis.lcd_display_string("se pulso numero 1",1)
+    time.sleep(4)
+  if Tl.lectura=="2":
+    dis.lcd_display_string("se pulso numero 2",1)
+    time.sleep(4)
+  if Tl.lectura=="3":
+    dis.lcd_display_string("se pulso numero 3",1)
+    time.sleep(4)
+  if Tl.lectura=="4":
+    dis.lcd_display_string("se pulso numero 4",1)
+    time.sleep(4)
+
+
+
