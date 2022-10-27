@@ -1,4 +1,4 @@
-import RPI.GPIO as GPIO
+import rpi.GPIO as GPIO
 import time
 
 GPIO.setmode(GPIO.BOARD)
