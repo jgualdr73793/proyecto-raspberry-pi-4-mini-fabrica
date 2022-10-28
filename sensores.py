@@ -48,7 +48,6 @@ def loop():
     print("green value - ",green)
     time.sleep(2)  
 
-
 def endprogram():
     GPIO.cleanup()
 
