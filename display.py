@@ -1,7 +1,6 @@
-import lcddriver
+from rpi.lcd import LCD
 import time
-
-dis= lcddriver.lcd()
+dis= LCD()
 
 
 

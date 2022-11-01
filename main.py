@@ -1,17 +1,43 @@
 from display import dis as dis
-from tecladop import lectura as Tl
 import time
+from tecladop import x as Tl
+def setup():
+    dis.clear()
+    dis.text("seleccione",1)
+    dis.text("una opcion",2)
+    time.sleep(1)
+    dis.text("1 -ROJO",1)
+    dis.text("2 -AZUL",2)
+    time.sleep(1)
+    dis.text("3 -AMARILLO",1)
+    dis.text("4 -SALIR",2)
+    time.sleep(1)
+    dis.clear()
 
-def display(Tl):
-  if Tl.lectura=="1":
-    dis.lcd_display_string("se pulso numero 1",1)
-    time.sleep(4)
-  if Tl.lectura=="2":
-    dis.lcd_display_string("se pulso numero 2",1)
-    time.sleep(4)
-  if Tl.lectura=="3":
-    dis.lcd_display_string("se pulso numero 3",1)
-    time.sleep(4)
-  if Tl.lectura=="4":
-    dis.lcd_display_string("se pulso numero 4",1)
-    time.sleep(4)
+def loop():
+    while True:
+        if Tl()=="1":
+            dis.clear()
+            dis.text("ROJO",1)
+            time.sleep(1)
+            dis.clear()
+        if Tl()=="2":
+            dis.clear()
+            dis.text("AZUL",1)
+            time.sleep(1)
+            dis.clear()
+        if Tl()=="3":
+            dis.clear()
+            dis.text("AMARILLO",1)
+            time.sleep(1)
+            dis.clear()
+        if Tl()=="4":
+            dis.clear()
+            dis.text("SALIR",1)
+            time.sleep(1)
+            dis.clear()
+            break
+
+if __name__=='__main__':
+    setup()
+    loop()
