@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 from display import dis as dis
 import time
 import Menu as m
@@ -118,3 +119,8 @@ if n_canicas!=1:
         dis.text("SALIR",1)
         time.sleep(1.5)
         dis.clear()
+=======
+import Menu
+import Loop
+
+>>>>>>> 62f7665495b664ade1e26a34cdc515c830d44f67
